@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Matematika</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <h2 class="text-xl">Skor : <span id="skor">0</span></h2>
+<div class="relative overflow-y-clip h-36 w-full">
+
+    <div id="alert" class="absolute  bg-blue-100 w-full h-31  top-0 flex flex-wrap pt-2  duration-300 -translate-y-35">
+           <h1 id="Pesanalert" class="text-center font-semibold w-full text-lg"></h1>
+           <p class="w-full mt-1 font-semibold text-center text-sm">Skor anda <span id="skorAkhir"></span> <span id="skorSempurna"></span>, ingin main lagi?</p>
+           <div class="w-full">
+               <button id="tombolAlert" class="bg-green-400 font-semibold text-white text-lg px-3 py-1 rounded-lg mx-auto block mt-2" onclick="tutupPesan();">Ok!</button>
+           </div>
+    </div>
+</div>
+  
+
+
+<div class="mx-auto bg-slate-400 pb-12 mt-15 rounded-xl flex flex-wrap">
+    <h1 class="text-4xl text-white text-center font-semibold w-full">Kuis Matematika</h1>
+    <p class="w-full " id="progress"></p>
+    <p id="pertanyaan" class="mt-4 text-center text-2xl w-full mt-2">
+     Apakah Kamu Siap
+    </p>
+    <input type="text" id="jawab" class="bg-white w-full mx-6 h-0 text-center"  >
+    <button id="kirimjawab" class="bg-blue-400 rounded-xl px-3 py-1 active:bg-blue-500 m-auto mt-6 text-white">Mulai</button>
+    <p class="w-full text-center " id="bungkus-hasil">Jawaban Anda : <span id="hasil" class="text-green-100 font-semibold"></span></p>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
