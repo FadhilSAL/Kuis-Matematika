@@ -52,7 +52,8 @@ function tampilPesan(pesan,skor,pertanyaan,nomorPertanyaan){
 
         skorAkhir.textContent = skor;
     }
-    if(skorAkhir == pertanyaan.length){
+    console.log(skorAkhir)
+    if(skorAkhir.textContent == pertanyaan.length){
   skorSempurna.textContent = 'ini adalah skor yang sempurna'
     }
     customalert.classList.remove('-translate-y-35');
