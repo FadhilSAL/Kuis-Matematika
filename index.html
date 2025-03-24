@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuis Matematika</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+    </script>
+  <style>
+    .light-mode{
+        background: linear-gradient(to right,oklch(0.809 0.105 251.813),oklch(0.827 0.119 306.383));
+    }
+  </style>
 </head>
-<body>
-    <h2 class="text-xl">Skor : <span id="skor">0</span></h2>
+<body class="light-mode duration-300">
+    <h2 class="text-xl text-white">Skor : <span id="skor">0</span></h2>
 <div class="relative overflow-y-clip h-36 w-full">
 
     <div id="alert" class="absolute  bg-blue-100 w-full h-31  top-0 flex flex-wrap pt-2  duration-300 -translate-y-35">
@@ -21,17 +27,20 @@
   
 
 
-<div class="mx-auto bg-slate-400 pb-12 mt-15 rounded-xl flex flex-wrap">
-    <h1 class="text-4xl text-white text-center font-semibold w-full">Kuis Matematika</h1>
+<div class="mx-auto bg-white pb-12 mt-15 rounded-xl flex flex-wrap shadow-2xl text-black" id="game">
+    <h1 class="text-4xl text-center font-semibold w-full">Kuis Matematika</h1>
     <p class="w-full " id="progress"></p>
-    <p id="pertanyaan" class="mt-4 text-center text-2xl w-full mt-2">
+    <p id="pertanyaan" class="mt-4 text-center text-2xl w-full mt-2  font-semibold">
      Apakah Kamu Siap
     </p>
-    <input type="text" id="jawab" class="bg-white w-full mx-6 text-center h-10 hidden"  >
+    <input type="text" id="jawab" class="bg-slate-100 w-full mx-6 text-center h-10 hidden text-black"  >
     <button id="kirimjawab" class="bg-blue-400 rounded-xl px-10 py-4 active:bg-blue-500 m-auto mt-6 text-white ">Mulai</button>
-    <p class="w-full text-center " id="bungkus-hasil">Jawaban Anda : <span id="hasil" class="text-green-100 font-semibold"></span></p>
+    <p class="w-full text-center " id="bungkus-hasil">Jawaban Anda : <span id="hasil" class="text-green-300 font-semibold"></span></p>
 </div>
 
+<div class="bg-yellow-200 rounded-2xl w-18 h-8 mt-2 mx-auto shadow-2xl border-slate-900 border-xl box-border border-1 " id="toggleDiv">
+    <span class="h-7 w-7 rounded-full bg-yellow-400 block duration-300 shadow-2xl mt-0.5 mx-0.5" id="toggle"></span>
+</div>
     <script src="script.js"></script>
 </body>
 </html>

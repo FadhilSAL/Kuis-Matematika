@@ -9,6 +9,11 @@ const progress = document.getElementById('progress');
 const skorAkhir = document.getElementById('skorAkhir');
 const bungkusHasil = document.getElementById('bungkus-hasil');
 const skorSempurna = document.getElementById('skorSempurna');
+const toggleDark = document.getElementById('toggle');
+const toggleDarkDiv = document.getElementById('toggleDiv');
+const body = document.querySelector('body');
+const game = document.getElementById('game');
+
 
 const pertanyaan =  [
 
@@ -126,4 +131,23 @@ kirim.addEventListener('click',function(){
     }
     progress.textContent = `Soal terjawab : ${nomorPertanyaan}/${pertanyaan.length}`
     koljawaban.value = '';
+})
+
+
+
+toggleDark.addEventListener('click',function(){
+    toggleDark.classList.toggle('translate-x-9.5');
+    toggleDark.classList.toggle('bg-yellow-400');
+  toggleDark.classList.toggle('bg-slate-400');
+  toggleDarkDiv.classList.toggle('bg-yellow-200');
+  toggleDarkDiv.classList.toggle('bg-slate-200');
+
+  //ketika dark mode
+body.classList.toggle('light-mode');
+body.classList.toggle('bg-slate-600');
+game.classList.toggle('text-white');
+game.classList.toggle('bg-white');
+game.classList.toggle('bg-slate-500');
+
+
 })
