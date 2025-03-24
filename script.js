@@ -35,6 +35,18 @@ const pertanyaan =  [
     {
         pertanyaan:'Jika f(x) = 2x + 3 diketahui x = 10 maka f(10) = ?',
         jawaban:'23'
+    },
+    {
+      pertanyaan:'14 / 2 + 7',
+      jawaban:'14'
+    },
+    {
+        pertanyaan:'8 x 9 / 4',
+        jawaban:'18'
+    },
+    {
+        pertanyaan:'80 / 8',
+        jawaban:'10'
     }
   
 ]
